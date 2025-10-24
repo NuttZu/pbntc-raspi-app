@@ -1,0 +1,17 @@
+{
+  "name": "mediaControlApp",
+  "version": "1.0.0",
+  "main": "src\\app\\main.js",
+  "repository": "https://github.com/NuttZu/PBNTC-python-gui",
+  "author": "NuttZu",
+  "license": "MIT",
+  "devDependencies": {
+    "nw": "0.104.1-sdk",
+    "nw-builder": "^4.16.0"
+  },
+
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32, win64, linux32, linux64 -buildDir dist/ src/" 
+  }
+}
