@@ -1,9 +1,9 @@
 {
-  "name": "mediaControlApp",
+  "name": "media-control-app",
   "version": "1.0.0",
   "main": "src\\app\\main.js",
   "repository": "https://github.com/NuttZu/PBNTC-python-gui",
-  "author": "NuttZu",
+  "author": "NuttZuARP",
   "license": "MIT",
   "devDependencies": {
     "nw": "0.104.1-sdk",

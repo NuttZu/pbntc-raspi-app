@@ -1,0 +1,3 @@
+let CloseBtn = () => {
+    window.close()
+};

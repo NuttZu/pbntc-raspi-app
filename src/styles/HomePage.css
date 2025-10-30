@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'FC Daisy';
+    src: url('../assets/fonts/FC-Daisy-Regular.ttf')
+}
+
+body {
+    font-family: 'FC Daisy';
+    background-color: #00343d;
+}
+
+.Header-Container {
+    display: flex;
+}
+
+#HeaderLabel  {
+    color: white;
+    font-size: 7vw;
+    margin-bottom: 20px;
+    margin-left: 2vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2vw;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.home-container {
+    padding: 0;
+    box-sizing: content-box;
+    max-width: 100%;
+    margin-top: 4vw;
+    border-radius: 2vw;
+    border: white 0.2vw solid;
+}
+
+.home-container:hover {
+    border: yellow 0.5vw solid;
+}
+
+.container p {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#CloseBtn {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    border-radius: .5vw;
+    color: red; /* Set text color to red */
+    font-size: 3vw; /* Adjust font size for visibility */
+    text-align: center; /* Center the text */
+}
+
+#CloseBtn::before {
+    content: '✖'; /* Unicode for a cross mark */
+    display: block;
+    line-height: 3.2vw; /* Center vertically */
+}
+
+#CloseBtn:hover {
+    background-color: rgb(33, 33, 33);
+    color: rgb(242, 50, 50);
+    border : yellow 0.2vw solid;    
+}
