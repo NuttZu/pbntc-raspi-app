@@ -1,3 +1,0 @@
-let CloseBtn = () => {
-    window.close()
-};
