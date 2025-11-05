@@ -121,3 +121,38 @@ html, body {
         font-size: 7vw;
     }
 }
+
+/* === Bottom Nav Bar === */
+.Bottom-Nav {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: black;
+    color: white;
+    font-size: clamp(16px, 3vw, 36px);
+    padding: 1vh 3vw;
+    border: 0.2vw solid white;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: 'FC Daisy';
+}
+
+.nav-btn:hover {
+    background-color: yellow;
+    color: black;
+    transform: scale(1.05);
+}
+
+.nav-btn.home {
+    font-weight: bold;
+}

@@ -7,6 +7,7 @@
     <title></title>
 </head>
 <body>
+    <!-- === Header === -->
     <div class="Header-Container">
         <div id="HeaderLabel">เขาค้อ</div>
         <div style="display: flex; flex-direction: row;">
@@ -14,6 +15,8 @@
             <div onclick="CloseBtn()" id="CloseBtn"></div>
         </div>
     </div>
+
+    <!-- === Content === -->
     <div class="container">
         <div>
             <p>
@@ -25,15 +28,22 @@
             <img class="kaokoh-container" src="../assets/media/KaoKoh/3.jpg">
         </div>
     </div>
+
+    <!-- === Bottom Navigation Bar === -->
+    <div class="Bottom-Nav">
+        <button class="nav-btn" onclick="changePage('main')">&laquo;</button>
+        <button class="nav-btn home" onclick="changePage('main')">Home</button>
+        <button class="nav-btn" onclick="changePage('NamnaoNationalPark')">&raquo;</button>
+    </div>
+
+    <script>
+        function CloseBtn() {
+            window.electronAPI.closeApp();
+        }
+
+        function changePage(page) {
+            window.location.href = `${page}.html`;
+        }
+    </script>
 </body>
 </html>
-<script>
-    function CloseBtn() {
-    window.electronAPI.closeApp();
-    }
-
-    function changePage(page) {
-        window.location.href = `${page}.html`;
-    }
-    
-</script>
