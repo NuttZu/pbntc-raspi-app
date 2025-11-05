@@ -1,76 +1,123 @@
 @font-face {
     font-family: 'FC Daisy';
-    src: url('../assets/fonts/FC-Daisy-Regular.ttf')
+    src: url('../assets/fonts/FC-Daisy-Regular.ttf');
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* prevent scrolling */
     font-family: 'FC Daisy';
     background-color: #00343d;
+    display: flex;
+    flex-direction: column;
 }
 
+/* === Header === */
 .Header-Container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    padding: 0 2vw;
+    position: relative;
 }
 
-#HeaderLabel  {
+#HeaderLabel {
     color: white;
-    font-size: 7vw;
-    margin-bottom: 20px;
-    margin-left: 2vw;
+    font-size: clamp(24px, 5vw, 60px);
 }
 
+/* === Nav Button === */
+#HomeBtn, #CloseBtn {
+    background-color: black;
+    width: 3vw;
+    height: 3vw;
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    text-align: center;
+    color: red;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw; /* space between buttons */
+}
+
+#HomeBtn::before { content: '🏠'; }
+#CloseBtn::before { content: '✖'; }
+
+
+/* === Grid Container === */
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
     gap: 2vw;
     width: 90vw;
+    height: calc(100vh - 12vh); /* fill remaining space below header */
     margin: 0 auto;
+    place-items: center;
 }
 
+/* === Image Boxes === */
 .home-container {
-    padding: 0;
-    box-sizing: content-box;
-    max-width: 100%;
-    margin-top: 4vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* make image fill the area neatly */
     border-radius: 2vw;
     border: white 0.2vw solid;
+    transition: all 0.2s ease-in-out;
 }
 
 .home-container:hover {
     border: yellow 0.5vw solid;
+    transform: scale(1.03);
 }
 
+/* === Text Labels === */
 .container p {
     color: white;
-    font-size: 3vw;
+    font-size: clamp(16px, 2.5vw, 36px);
     text-align: center;
     margin-top: 1vw;
-    margin-bottom: 1vw;
+    user-select: none;
 }
 
-#CloseBtn {
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    width: 3vw;
-    height: 3vw;
-    cursor: pointer;
-    border-radius: .5vw;
-    color: red; /* Set text color to red */
-    font-size: 3vw; /* Adjust font size for visibility */
-    text-align: center; /* Center the text */
+.container img {
+    margin-top: 4vw;
+    margin: 3vw;
+    width: clamp(100px, 50vw, 500px);
+    height: clamp(100px, 20vw, 300px);
+    object-fit: cover;
+    border: white 0.2vw solid;
+    border-radius: clamp(12px, 2vw, 32px);
 }
 
-#CloseBtn::before {
-    content: '✖'; /* Unicode for a cross mark */
-    display: block;
-    line-height: 3.2vw; /* Center vertically */
-}
+/* === Responsive Adjustment for Phones === */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 
-#CloseBtn:hover {
-    background-color: rgb(33, 33, 33);
-    color: rgb(242, 50, 50);
-    border : yellow 0.2vw solid;    
+    #CloseBtn {
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;
+    }
+
+    #HeaderLabel {
+        font-size: 7vw;
+    }
 }

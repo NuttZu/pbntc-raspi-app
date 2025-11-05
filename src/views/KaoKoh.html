@@ -9,33 +9,20 @@
 <body>
     <div class="Header-Container">
         <div id="HeaderLabel">เขาค้อ</div>
-        <div onclick="CloseBtn()" id="CloseBtn">
+        <div style="display: flex; flex-direction: row;">
+            <div onclick="changePage('main')" id="HomeBtn"></div>
+            <div onclick="CloseBtn()" id="CloseBtn"></div>
         </div>
     </div>
     <div class="container">
         <div>
-            <img  onclick="changePage('KaoKoh')" class="home-container" src="../assets/media/KaoKoh/1.png" id="BtnKaokoh">
-            <p onclick="changePage('KaoKoh')">เขาค้อ</p>
+            <p>
+                เขาค้อมีจุดชมวิวหลายที่ ขอยกตัวอย่างเป็น เขาตะเคียนโง๊ะ ซึ่งเป็นจุดชมวิวที่สามารถมองเห็นทิวทัศน์ของเขาค้อได้อย่างกว้างขวาง
+            </p>
         </div>
-        <div>
-            <img onclick="changePage('NamnaoNationalPark')" class="home-container" src="../assets/media/NamnaoNationalPark/1.png" id="BtnNamnao">
-            <p onclick="changePage('NamnaoNationalPark')">อุทยานแห่งชาติน้ำหนาว</p>
-        </div>
-        <div>
-            <img onclick="changePage('Phutubburg')" class="home-container" src="../assets/media/Phutubburg/1.png" id="BtnPhutubburg">
-            <p onclick="changePage('Phutubburg')">ภูทับเบิก</p>
-        </div>
-        <div>
-            <img onclick="changePage('WatPraThat')" class="home-container" src="../assets/media/WatPraThat/1.png" id="BtnWatPrathat">
-            <p onclick="changePage('WatPraThat')">วัดพระธาติผาซ่อนแก้ว</p>
-        </div>
-        <div>
-            <img onclick="changePage('WeaponMuseum')" class="home-container" src="../assets/media/WeaponMuseum/1.png" id="BtnWeaponMuseum">
-            <p onclick="changePage('WeaponMuseum')">พิพิธภัณฑ์อาวุธเขาค้อ</p>
-        </div>
-        <div>
-            <img onclick="changePage('WindTurbineField')" class="home-container" src="../assets/media/WindTurbineField/1.png" id="BtnWindTurbineField">
-            <p onclick="changePage('WindTurbineField')">ทุ่งกังหันลมเขาค้อ</p>
+        <div class="image-container" style="display: flex; flex-direction: row; gap: 1vw; justify-content: center; align-items: center;">
+            <img class="kaokoh-container" src="../assets/media/KaoKoh/2.jpg">
+            <img class="kaokoh-container" src="../assets/media/KaoKoh/3.jpg">
         </div>
     </div>
 </body>
