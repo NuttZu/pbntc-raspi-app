@@ -14,10 +14,10 @@ module.exports = {
         setupIcon: 'src/assets/icon.ico', // optional but recommended
       },
     },
-    {
-      name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
-    },
+    // {
+    //   name: '@electron-forge/maker-zip',
+    //   platforms: ['darwin'],
+    // },
     {
       name: '@electron-forge/maker-deb',
       config: {
@@ -27,10 +27,10 @@ module.exports = {
         },
       },
     },
-    {
-      name: '@electron-forge/maker-rpm',
-      config: {},
-    },
+    // {
+    //   name: '@electron-forge/maker-rpm',
+    //   config: {},
+    // },
   ],
   plugins: [
     {
