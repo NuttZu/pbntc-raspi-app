@@ -57,7 +57,7 @@ by type :
 
     whoami
 
-you will get your user name like this :
+you will get your user name something like this :
 
 > admin
 
