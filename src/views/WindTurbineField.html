@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/KaoKoh.css">
+    <title></title>
+</head>
+<body>
+    <!-- === Header === -->
+    <div class="Header-Container">
+        <div id="HeaderLabel">ทุ่งกังหันลมเขาค้อ</div>
+        <div style="display: flex; flex-direction: row;">
+            <div onclick="changePage('main')" id="HomeBtn"></div>
+            <div onclick="CloseBtn()" id="CloseBtn"></div>
+        </div>
+    </div>
+
+    <!-- === Content === -->
+    <div class="container">
+        <div>
+            <p>
+                ทุ่งกังหันลมเขาค้อ เป็นแหล่งผลิตพลังงานสะอาดจากลมที่ใหญ่ที่สุดในประเทศไทย ตั้งอยู่บนยอดเขาสูง
+                สามารถมองเห็นวิวทิวทัศน์ของขุนเขาและทะเลหมอกได้อย่างสวยงาม
+            </p>
+        </div>
+        <div>
+            <div class="image-container">
+                <img class="kaokoh-container" src="../assets/media/WindTurbineField/2.jpeg">
+                <img class="kaokoh-container" src="../assets/media/WindTurbineField/3.jpeg">
+            </div>
+            <div class="image-container">
+                <div style="
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: left;
+                    align-items: flex-start;
+                ">
+                    <p style="white-space: nowrap;">🍃 มีการพัฒนาพื้นที่ให้นักท่องเที่ยวสามารถมาท่องเที่ยวชมวิวกังหันลมใหญ่ยักษ์</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">มีกิจกรรมให้ทำมากมาย อากาศเย็นสบาย และวิวยังสวยน่าประทับใจ รับรองเลยว่ามาเที่ยวที่นี่แล้วไม่อยากกลับเลยล่ะ</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ซึ่งใครที่มาเที่ยวในฤดูฝน รับรองว่าเจอทะเลหมอกลอยฟุ้งตัดผ่านวิวกังหันลม สายถ่ายรูปรับรองว่าได้รูปสวยๆอย่างแน่นอน</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ส่วนสายกิจกรรมลองขับรถ "ฟอร์มูล่าม้ง" ไถลงเนินแบบเร้าใจ หรือหากอยากหวาดเสียว ต้องลอง "ชิงช้าม้ง"</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">เป็นการโหนชิงช้าโดยการใช้เชือกเส้นเดียว บริเวณรอบๆมีร้านขายของฝากจากชาวบ้านอีกเพียบ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Bottom Navigation Bar === -->
+    <div class="Bottom-Nav">
+        <button class="nav-btn" onclick="changePage('WeaponMuseum')">&laquo;</button>
+        <button class="nav-btn home" onclick="changePage('main')">Home</button>
+        <button class="nav-btn" disabled onclick="changePage('WindTurbineField')">&raquo;</button>
+    </div>
+
+    <script>
+        function CloseBtn() {
+            window.electronAPI.closeApp();
+        }
+
+        function changePage(page) {
+            window.location.href = `${page}.html`;
+        }
+    </script>
+</body>
+</html>

@@ -23,15 +23,31 @@
                 เขาค้อมีจุดชมวิวหลายที่ ขอยกตัวอย่างเป็น เขาตะเคียนโง๊ะ ซึ่งเป็นจุดชมวิวที่สามารถมองเห็นทิวทัศน์ของเขาค้อได้อย่างกว้างขวาง
             </p>
         </div>
-        <div class="image-container" style="display: flex; flex-direction: row; gap: 1vw; justify-content: center; align-items: center;">
-            <img class="kaokoh-container" src="../assets/media/KaoKoh/2.jpg">
-            <img class="kaokoh-container" src="../assets/media/KaoKoh/3.jpg">
+        <div>
+            <div class="image-container">
+                <img class="kaokoh-container" src="../assets/media/KaoKoh/2.jpg">
+                <img class="kaokoh-container" src="../assets/media/KaoKoh/3.jpg">
+            </div>
+            <div class="image-container">
+                <div style="
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: left;
+                    align-items: flex-start;
+                ">
+                    <p>⛰️ เดือนที่ดีที่สุด:</p> 
+                    <p>ตุลาคม –> กุมภาพันธ์ (ปลายฝนถึงต้นหนาว)</p>
+                    <p>เพราะอากาศเย็น หมอกหนา และทัศนียภาพเขียวขจี</p>
+                    <p>เดือน พฤศจิกายน –> ธันวาคม คือช่วง พีคสุดของทะเลหมอก</p>
+                    <p>เดือน มกราคม –> กุมภาพันธ์ อากาศจะเริ่มแห้งเย็น เหมาะกับการชมดาวตอนกลางคืน</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- === Bottom Navigation Bar === -->
     <div class="Bottom-Nav">
-        <button class="nav-btn" onclick="changePage('main')">&laquo;</button>
+        <button class="nav-btn" disabled onclick="changePage('main')">&laquo;</button>
         <button class="nav-btn home" onclick="changePage('main')">Home</button>
         <button class="nav-btn" onclick="changePage('NamnaoNationalPark')">&raquo;</button>
     </div>

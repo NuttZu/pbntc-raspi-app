@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/KaoKoh.css">
+    <title></title>
+</head>
+<body>
+    <!-- === Header === -->
+    <div class="Header-Container">
+        <div id="HeaderLabel">ภูทับเบิก</div>
+        <div style="display: flex; flex-direction: row;">
+            <div onclick="changePage('main')" id="HomeBtn"></div>
+            <div onclick="CloseBtn()" id="CloseBtn"></div>
+        </div>
+    </div>
+
+    <!-- === Content === -->
+    <div class="container">
+        <div>
+            <p>
+                หนึ่งในสถานที่ท่องเที่ยวยอดนิยมของจังหวัดเพชรบูรณ์ ที่มีความสูงจากระดับทะเลปานกลางประมาณ 1,768 เมตร ซึ่งถือเป็นจุดชมวิวที่สูงที่สุดของเพชรบูรณ์
+            </p>
+        </div>
+        <div>
+            <div class="image-container">
+                <img class="kaokoh-container" src="../assets/media/Phutubburg/2.jpg">
+                <img class="kaokoh-container" src="../assets/media/Phutubburg/3.jpg">
+            </div>
+            <div class="image-container">
+                <div style="
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: left;
+                    align-items: flex-start;
+                ">
+                    <p style="white-space: nowrap;">🌟 เป็นดินแดนในฝันของนักเดินทางที่ต้องมาเยือนสักครั้งหนึ่งในชีวิต</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">หากแวะมาเยือนช่วงเดือนธันวาคม-มกราคม จะได้ยลโฉมดอกซากุระ หรือนางพญาเสือโคร่งสีชมพูบานสะพรั่งไปทั้งภูเขา</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">จนถูกเปรียบเปรยว่าเป็น "ดาวบนดิน" เลยทีเดียว สามารถมองดูดาว พร้อมกางเต็นท์นอนฟังเสียงธรรมชาติได้อีกด้วย</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">นอกจากนี้ ภูทับเบิกยังเป็นที่ตั้งของหมู่บ้านชาวไทยภูเขาเผ่าม้ง และมีแปลงปลูกกะหล่ำปลีที่ใหญ่ที่สุดในโลก</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">มีสถานีวิจัยเพชรบูรณ์ แปลงทดลองทับเบิก มหาวิทยาลัยเกษตรศาสตร์ ซึ่งเป็นสถานีสาธิตปลูกพืชเกษตรเมืองหนาว</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Bottom Navigation Bar === -->
+    <div class="Bottom-Nav">
+        <button class="nav-btn" onclick="changePage('NamnaoNationalPark')">&laquo;</button>
+        <button class="nav-btn home" onclick="changePage('main')">Home</button>
+        <button class="nav-btn" onclick="changePage('WatPraThat')">&raquo;</button>
+    </div>
+
+    <script>
+        function CloseBtn() {
+            window.electronAPI.closeApp();
+        }
+
+        function changePage(page) {
+            window.location.href = `${page}.html`;
+        }
+    </script>
+</body>
+</html>

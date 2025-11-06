@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/KaoKoh.css">
+    <title></title>
+</head>
+<body>
+    <!-- === Header === -->
+    <div class="Header-Container">
+        <div id="HeaderLabel">วัดพระธาติผาซ่อนแก้ว</div>
+        <div style="display: flex; flex-direction: row;">
+            <div onclick="changePage('main')" id="HomeBtn"></div>
+            <div onclick="CloseBtn()" id="CloseBtn"></div>
+        </div>
+    </div>
+
+    <!-- === Content === -->
+    <div class="container">
+        <div>
+            <p style="white-space: nowrap; ">
+                หากมาเที่ยวถิ่นเขาค้อ อย่าพลาดแวะไปชมแหล่งท่องเที่ยวเชิงประวัติศาสตร์ที่บันทึกเรื่องราวในสมัยปี 2524 ไว้ด้วยหลักฐานแห่งชัยชนะ
+            </p>
+        </div>
+        <div>
+            <div class="image-container">
+                <img class="kaokoh-container" src="../assets/media/WeaponMuseum/2.jpg">
+                <img class="kaokoh-container" src="../assets/media/WeaponMuseum/3.jpg">
+            </div>
+            <div class="image-container">
+                <div style="
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: left;
+                    align-items: flex-start;
+                ">
+                    <p style="white-space: nowrap;">⚔️ เป็นพิพิธภัณฑ์อาวุธ จัดแสดงปืนใหญ่ ซากรถถังและอาวุธที่ใช้สู้รบกันบนเขาค้อ</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">สถานที่แห่งนี้เคยเป็นฐานปืนใหญ่ในการสู้รบเพื่อชิงพื้นที่ของเขาค้อคืนจากคอมมิวนิสต์</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ปัจจุบันฐานอิทธิจึงเป็นพิพิธภัณฑ์กลางแจ้งที่จัดแสดงอาวุธยุทโธปกรณ์ที่ใช้ในการสู้รบตั้งแสดงอยู่ภายนอกอาคาร</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">เช่น เครื่องบินขับไล่ เอฟ 5 ปืนใหญ่ รถสายพานลำเลียงพล ซากรถถัง รถแทรกเตอร์ บังเกอร์สำหรับหลบภัย</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ในอาคารมีห้องบรรยายสรุปเกี่ยวกับเหตุการณ์ของยุทธภูมิเลือดในการสู้รบให้แก่ผู้เข้าชมที่มาเป็นหมู่คณะ</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Bottom Navigation Bar === -->
+    <div class="Bottom-Nav">
+        <button class="nav-btn" onclick="changePage('WatPraThat')">&laquo;</button>
+        <button class="nav-btn home" onclick="changePage('main')">Home</button>
+        <button class="nav-btn" onclick="changePage('WindTurbineField')">&raquo;</button>
+    </div>
+
+    <script>
+        function CloseBtn() {
+            window.electronAPI.closeApp();
+        }
+
+        function changePage(page) {
+            window.location.href = `${page}.html`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/KaoKoh.css">
+    <title></title>
+</head>
+<body>
+    <!-- === Header === -->
+    <div class="Header-Container">
+        <div id="HeaderLabel">อุทยานแห่งชาติน้ำหนาว</div>
+        <div style="display: flex; flex-direction: row;">
+            <div onclick="changePage('main')" id="HomeBtn"></div>
+            <div onclick="CloseBtn()" id="CloseBtn"></div>
+        </div>
+    </div>
+
+    <!-- === Content === -->
+    <div class="container">
+        <div>
+            <p>
+                เป็นแหล่งท่องเที่ยวที่มีชื่อเสียงอีกแห่งหนึ่งของเพชรบูรณ์ ได้รับความนิยมในหมู่นักเดินทางที่ชอบการเดินป่าศึกษาธรรมชาติ
+                เป็นภูเขาสูงสลับซับซ้อน เป็นแหล่งต้นน้ำที่สำคัญของแม่น้ำหลายสาย มีสัตว์ป่าชุกชุมรวมทั้งนกชนิดต่างๆ
+            </p>
+        </div>
+        <div>
+            <div class="image-container">
+                <img class="kaokoh-container" src="../assets/media/NamnaoNationalPark/2.jpg">
+                <img class="kaokoh-container" src="../assets/media/NamnaoNationalPark/3.jpg">
+            </div>
+            <div class="image-container">
+                <div style="
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: left;
+                    align-items: flex-start;
+                ">
+                    <p style="white-space: nowrap;">🌟 เป็นแหล่งท่องเที่ยวที่มีชื่อเสียงอีกแห่งหนึ่งของเพชรบูรณ์</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ได้รับความนิยมในหมู่นักเดินทางที่ชอบสัมผัสกับอากาศหนาวเย็นและเดินป่าศึกษาธรรมชาติ</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">มีสัตว์ป่า นกชนิดต่างๆตามเส้นทางเดินป่า ศึกษาธรรมชาติบนเขาสูงผ่านจุดชมวิวริมหน้าผา</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">มีน้ำตกที่สวยงามหลายแห่ง เช่น น้ำตกตาดพรานบา เป็นน้ำตกขนาดใหญ่มีน้ำไหลตลอดปี</p>
+                    <p style="white-space: nowrap; padding-left: 5%;">ในเดือนธันวาคม -> มกราคมของทุกปี ผืนป่าบริเวณนี้จะผลัดใบเปลี่ยนสีซึ่งเป็นปรากฏการณ์ธรรมชาติที่สวยงาม</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Bottom Navigation Bar === -->
+    <div class="Bottom-Nav">
+        <button class="nav-btn" onclick="changePage('KaoKoh')">&laquo;</button>
+        <button class="nav-btn home" onclick="changePage('main')">Home</button>
+        <button class="nav-btn" onclick="changePage('Phutubburg')">&raquo;</button>
+    </div>
+
+    <script>
+        function CloseBtn() {
+            window.electronAPI.closeApp();
+        }
+
+        function changePage(page) {
+            window.location.href = `${page}.html`;
+        }
+    </script>
+</body>
+</html>
