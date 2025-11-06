@@ -18,7 +18,7 @@ Option 1 : wget
     wget -O pbntc-raspi-app_1.0.0_arm64.deb \
     https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb
 
-Option 2 : 
+Option 2 : curl
 
     curl -L -o pbntc-raspi-app_1.0.0_arm64.deb \
     https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb
