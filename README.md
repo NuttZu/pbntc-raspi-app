@@ -25,7 +25,7 @@ Option 2 : curl
 
 Then install it
 
-    sudo apt install pbntc-raspi-app_1.0.0_arm64.deb
+    sudo apt install ./pbntc-raspi-app_1.0.0_arm64.deb
 
 *then you can remove the **.deb** file*
 
