@@ -11,7 +11,7 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         name: 'pbntc_raspi_app',
-        setupIcon: 'assets/icon.ico', // optional but recommended
+        setupIcon: 'src/assets/icon.ico', // optional but recommended
       },
     },
     {
@@ -23,7 +23,7 @@ module.exports = {
       config: {
         options: {
           maintainer: 'NuttZuARP',
-          icon: 'assets/icon.png',
+          icon: 'src/assets/icon.png',
         },
       },
     },
