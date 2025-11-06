@@ -3,10 +3,11 @@ const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
-    // fullscreen: true,
+    fullscreen: true,
 
-    height: 480,
-    width: 800,
+    // height: 480,
+    // width: 800,
+
     webPreferences: {
       preload: path.join(__dirname, 'src', 'modules', 'preload.js'),
       contextIsolation: true,
