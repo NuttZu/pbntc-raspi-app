@@ -1,3 +1,4 @@
+
 ## **PBNTC GUI APP**
 
 it's about travel landmark in Phetchabun
@@ -9,7 +10,7 @@ it's about travel landmark in Phetchabun
 Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app-win32-x64.zip) and extract it then double click ***pbntc-raspi-app.exe***
 	
 
-## **Ubuntu & Debian & Raspberry pi**
+## **Raspberry pi & Ubuntu**
 
 Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb)	or you can download from terminal
 
@@ -28,19 +29,21 @@ Then install it
     sudo apt install ./pbntc-raspi-app_1.0.0_arm64.deb
 
 *then you can remove the **.deb** file*
-
+##
 and you can run the app by type :
 
     pbntc-raspi-app
 
+
+
 ## **How to uninstall?**
 for **Windows** you can just remove the directory
-
+##
 for **Linux** you can remove like this
 
     sudo apt remove pbntc-raspi-app
 
-## How to make it run on boot? (for linux)
+## How to make it run on boot? (for Raspberry Pi OS)
 
 you can do like this :
 
@@ -51,7 +54,7 @@ by type :
 you will get something like this :
 
 > /usr/bin/pbntc-raspi-app
-
+##
 **then you need to know your user name**
 by type :
 
@@ -89,15 +92,47 @@ then place this :
     WantedBy=multi-user.target
 
 then press **Ctrl + Y** and press **Enter**
-
+##
 **Then Reload and re-enable service**
 by type :
 
     sudo systemctl daemon-reload
     sudo systemctl enable pbntc-raspi-app.service
     sudo systemctl restart pbntc-raspi-app.service
-
+##
 **if you want to stop it form run on boot.**
 you can just delete service file by type :
 
     sudo rm -rf /etc/systemd/system/pbntc-raspi-app.service
+
+#
+
+## How to make it run on boot? (Ubuntu Desktop OS)
+
+first you need to know the path of your app by run this command.
+
+    which pbntc-raspi-app
+you will get something like this :
+
+> /usr/bin/pbntc-raspi-app
+##
+you need to search for **"Startup Applications"**
+by press double **Win** Key Or **Alt + F2** Or press **show apps** at the bottom left on your desktop
+then search for **"Startup Applications"** and open it
+then press **Add** button
+##
+You’ll see a window with fields:
+
+> Name : 
+> Command : 
+> Comment :
+
+the field **Name** you can give it like :
+
+> ***PBNTC Raspberry App***
+
+the field **Command** you need to give it your app path like this :
+> /usr/bin/pbntc-raspi-app
+> 
+the field **Comment** you can give it like :
+> Runs the PBNTC Raspberry App On Boot
