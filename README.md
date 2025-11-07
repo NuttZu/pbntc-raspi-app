@@ -91,7 +91,7 @@ then place this :
     [Install]
     WantedBy=multi-user.target
 
-then press **Ctrl + Y** and press **Enter**
+then press **Ctrl + X** then press **Y** and **Enter**
 ##
 **Then Reload and re-enable service**
 by type :
