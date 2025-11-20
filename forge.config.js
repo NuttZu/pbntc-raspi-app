@@ -4,6 +4,8 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    platform: 'linux',   // build for Linux
+    arch: 'arm64',       // build for ARMv8
   },
   rebuildConfig: {},
   makers: [
@@ -11,34 +13,25 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         name: 'pbntc_raspi_app',
-        setupIcon: 'src/assets/icon.ico', // optional but recommended
+        setupIcon: 'src/assets/icon.ico',
       },
     },
-    // {
-    //   name: '@electron-forge/maker-zip',
-    //   platforms: ['darwin'],
-    // },
     {
       name: '@electron-forge/maker-deb',
       config: {
+        arch: ['arm64'],   // specify ARM64 output
         options: {
           maintainer: 'NuttZuARP',
           icon: 'src/assets/icon.png',
         },
       },
     },
-    // {
-    //   name: '@electron-forge/maker-rpm',
-    //   config: {},
-    // },
   ],
   plugins: [
     {
       name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
     },
-    // Fuses are used to enable/disable various Electron functionality
-    // at package time, before code signing the application
     new FusesPlugin({
       version: FuseVersion.V1,
       [FuseV1Options.RunAsNode]: false,
