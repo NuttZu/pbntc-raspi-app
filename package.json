@@ -20,10 +20,14 @@
     "yarn": "^1.22.22"
   },
   "scripts": {
-    "start": "electron-forge start",
+    "dev": "electron-forge start",
+
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make-win-x64": "electron-forge make --platform=win32 --arch=x64",
+    "make-linux-arm64": "electron-forge make --platform=linux --arch=arm64",
+    "make-linux-x64": "electron-forge make --platform=linux --arch=x64"
   },
+
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
   }

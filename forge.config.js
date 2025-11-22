@@ -4,10 +4,9 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    platform: 'linux',   // build for Linux
-    arch: 'arm64',       // build for ARMv8
+    icon: "src/assets/icon" // no extension
   },
-  rebuildConfig: {},
+
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
@@ -19,14 +18,15 @@ module.exports = {
     {
       name: '@electron-forge/maker-deb',
       config: {
-        arch: ['arm64'],   // specify ARM64 output
+        arch: ['arm64'],
         options: {
           maintainer: 'NuttZuARP',
-          icon: 'src/assets/icon.png',
+          icon: 'src/assets/icon.png'
         },
       },
     },
   ],
+
   plugins: [
     {
       name: '@electron-forge/plugin-auto-unpack-natives',
