@@ -3,6 +3,14 @@
 
 it's about travel landmark in Phetchabun
 
+## Table Of Content
+- [How to install?](#how-to-install)
+	- [Windows](#windows) 
+	- [Linux](#linux)
+- [How to uninstall?](#how-to-uninstall)
+- [How to make it run on boot? (for Raspberry Pi OS)](#how-to-make-it-run-on-boot-for-raspberry-pi-os)
+- [How to make it run on boot? (Ubuntu Desktop OS)](#how-to-make-it-run-on-boot-ubuntu-desktop-os)
+
 ## **How to install?**
 
 ## **Windows**
