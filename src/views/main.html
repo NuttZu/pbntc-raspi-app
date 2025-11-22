@@ -48,5 +48,10 @@
     function changePage(page) {
         window.location.href = `${page}.html`;
     }
+
+    window.electronAPI.onPlaySound(() => {
+        const audio = new Audio("../assets/media/app start.wav");  // Put your file in the same folder or adjust path
+        audio.play();
+    });
     
 </script>

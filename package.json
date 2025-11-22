@@ -1,7 +1,7 @@
 {
   "name": "pbntc-raspi-app",
   "description": "A Raspberry Pi control panel built with Electron.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "main": "main.js",
   "repository": "https://github.com/NuttZu/pbntc-raspi-app",
   "author": "NuttZu <NuttZu.git@hotmail.com>",

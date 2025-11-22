@@ -17,6 +17,11 @@ function createWindow() {
 
   win.loadFile(path.join(__dirname, 'src', 'views', 'main.html'));
 
+  // When the HTML + CSS + images are fully loaded
+  win.webContents.on("did-finish-load", () => {
+    win.webContents.send("playSound");
+  });
+
   // Listen for close request from renderer
   ipcMain.on('app:close', () => {
     win.close();

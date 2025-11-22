@@ -61,6 +61,11 @@
         function changePage(page) {
             window.location.href = `${page}.html`;
         }
+
+        window.electronAPI.onPlaySound(() => {
+            const audio = new Audio("../assets/media/Phutubburg/Phutubburg.wav");  // Put your file in the same folder or adjust path
+            audio.play();
+        });
     </script>
 </body>
 </html>
