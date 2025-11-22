@@ -7,26 +7,41 @@ it's about travel landmark in Phetchabun
 
 ## **Windows**
 
-Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app-win32-x64.zip) and extract it then double click ***pbntc-raspi-app.exe***
+Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app-win32-x64.zip) and extract it then double click ***pbntc-raspi-app.exe***
 	
 
-## **Raspberry pi & Ubuntu**
+## **Linux**
 
-Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb)	or you can download from terminal
+For __x64__ Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_amd64.deb)
+For __arm64__ Download [This file](https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_arm64.deb)
+
+**or you can download from terminal**
 
 Option 1 : wget
 
-    wget -O pbntc-raspi-app_1.0.0_arm64.deb \
-    https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb
+	# for x64
+    wget -O pbntc-raspi-app_2.0.0_amd64.deb \
+    https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_amd64.deb
+
+	# for arm64
+	wget -O pbntc-raspi-app_2.0.0_arm64.deb \
+    https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_arm64.deb
 
 Option 2 : curl
 
-    curl -L -o pbntc-raspi-app_1.0.0_arm64.deb \
-    https://github.com/NuttZu/pbntc-raspi-app/releases/download/official-release/pbntc-raspi-app_1.0.0_arm64.deb
+    curl -L -o pbntc-raspi-app_2.0.0_amd64.deb \
+    https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_amd64.deb
+
+	url -L -o pbntc-raspi-app_2.0.0_arm64.deb \
+    https://github.com/NuttZu/pbntc-raspi-app/releases/download/V2.0/pbntc-raspi-app_2.0.0_arm64.deb
 
 Then install it
 
-    sudo apt install ./pbntc-raspi-app_1.0.0_arm64.deb
+	# for x64
+    sudo apt install ./pbntc-raspi-app_2.0.0_amd64.deb
+
+	# for arm64
+    sudo apt install ./pbntc-raspi-app_2.0.0_arm64.deb
 
 *then you can remove the **.deb** file*
 ##
